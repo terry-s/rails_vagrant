@@ -1,0 +1,4 @@
+# ignore some folders
+/.vagrant
+/cookbooks
+/tmp

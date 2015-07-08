@@ -1,0 +1,29 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+site "http://community.opscode.com/api/v1"
+
+cookbook 'apt' # Виконує команду 'sudo apt-get update'
+cookbook 'build-essential' # Встановлює залежності для компілювання
+# нативних ґемів (компілятор С)
+
+cookbook 'ruby_build' # Компілює з сирців Рубі
+cookbook 'nodejs' # Встановлює Node.js та npm
+cookbook 'git', '~> 4.2.2' # Встановлює GIT
+
+
+# Ці кулінарні книги є опціональними, тобто ви обираєте те, що вам
+# більш довподоби. Ті, які мені не потрібні, я закоментував.
+cookbook 'vim' # Встановлює vim, частенько необхідна річ на віртуальній машині
+cookbook 'chef_rvm', '~> 1.0.5' # Встановлює систему управління версіями Рубі,
+# а також "ґем-сету"
+
+cookbook 'zshell', '~> 0.3.0' # Встановлює ZSH
+cookbook 'oh-my-zsh', git: 'https://github.com/shingara/oh-my-zsh-chef'
+# Встановлює різні розширення для ZSH
+
+# cookbook 'rbenv', git: 'https://github.com/aminin/chef-rbenv' # Легка
+# альтернатива RVM
+
+# cookbook 'mysql', '5.5.3' # Встановлює базу даних MySQL
+# cookbook 'postgresql', '~> 3.4.20' # Встановлює базу даних PostgreSQL
