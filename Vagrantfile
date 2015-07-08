@@ -32,7 +32,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     chef.add_recipe "git"
     chef.add_recipe "chef_rvm::default"
     chef.add_recipe "zshell::default"
-    # chef.add_recipe "oh_my_zsh"
+    chef.add_recipe "oh_my_zsh"
 
     # chef.add_recipe "postgresql"
     # chef.add_recipe "mysql::server"
